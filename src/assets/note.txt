@@ -1,0 +1,129 @@
+
+   - json viewer
+   - conflict driven data
+         - change ui according location
+
+
+-> index as a key is an anti-pattern
+
+** >> Never ever keep hard corded data/images in your component folder
+   >> make separate folder named like utils/common
+   >> like log urls + other images's links
+
+- 2 types of export
+      -> export default component
+         <- import Component from "path";
+
+
+      -> export const component  = " ";
+        <- import { component } from "path"
+
+- Not write code more than 100-120 lines in a single file
+   <- code should be readable and remember code should not be messy
+
+- monolith v/s microservice architecture
+
+-> Shimmmer ui
+
+-> corsproxy.io
+-> useRouterError
+
+<<<<------------------------------------------------------------------------------------->>>>>
+
+-> Class based Component
+-> Lifecycle of class based component
+-> react lifecycle method diagrams
+      -> render phase ( mounting) (updating)  ( unmouting )
+          - constructor
+          - render
+
+      -> commit phase  ( componentDidMount ) ( componentDidUpdate) ( componentWillUnmount)
+         - react updates the DOM
+         - componentDidMount
+
+-> What is AJAX.
+-> Single Responsibility Principle
+
+-> How to bundle whole React Project
+-> Bundle separate Component
+
+-Chunking
+-Code Spliting
+-Dynamic Bundling
+-lazzy loading
+-on demand loading
+
+-> Lazy loading
+-> Lazy And Suspense - fallback
+
+
+-> material.ui
+-> Chakra.ui
+-> ant design
+-> shardcdn
+
+
+--> createContext - Episode 11.
+-- Do your own.
+ Q) What is prop drilling ?
+ Q) What is lifting the state up ?
+ Q) What are Context Provider and Context Consumer 
+
+
+ --> Higher Order Components...
+
+ --> zustan - State Management Library
+
+<<<<------------------------------------------------------------------------------------->>>>>
+ ------------------------------------------> Redux <--------------------------------------------
+        -- offers easy debugging
+    1) react-Redux
+    2) redux-toolkit
+
+    -vanila redux -> is too complex
+
+   -> add to cart button clicked
+   -> dispathes an action  which call reducer function which is update the slice of the store
+   -> we'll {Header'll} use *selector* to read the data from the slice and that selection will modified the 
+      component at cart section  -> this phenomena is known as subscribing to the store
+      -> Cart component subscribing to the store via selector
+
+   -> Provider from react-redux
+   -> configure from react-toolkit
+
+older version of redux -> vanila redux
+                       -> it is immutable
+But new version -> redux tool kit
+                -> it is mutale, here we can change the data of the state
+                -> here reduc use immer library for mutation
+               
+Immer simplifies handling immutable data structures​
+Immer can be used in any context in which immutable data structures need to be used
+
+<<<<------------------------------------------------------------------------------------->>>>>
+<<<<------------------------------------------------------------------------------------->>>>>
+
+Redux Dev Tools
+Read the RTK from the document.
+
+-----------
+Developer Testing
+
+Manual testing - not sufficient
+Types of Testing (Developer Testing) :- 
+1) Unit Testing
+2) Integration Testing
+         - events included
+3) End-to-end Testing
+
+--> React Testing Library
+      it is build on top of DOM-Testing Library
+--> Jest
+   RTL used Jest Testing Library behibd the screen 
+
+# Setting up Testing in our app
+- Install React Testing Library
+- Install Jest
+- Install Babel dependencies
+- configure Babel
+- configure parcel config file to disable default babel transpilation
