@@ -3,6 +3,9 @@ import  {useState} from 'react';
 import { useDispatch } from "react-redux";
 import { addItem} from "../utils/cartSlice";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const ItemList = ({ itemCards, title }) => {
   
   const length = itemCards?.length || null;
@@ -16,7 +19,20 @@ const ItemList = ({ itemCards, title }) => {
   
   const dispatch =  useDispatch();
   const handleAddItem = (itemCard) => {
+    
     dispatch(addItem(itemCard))
+    
+    toast('Item added successfully !!!', {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+
   }
 
   return (
@@ -53,6 +69,8 @@ const ItemList = ({ itemCards, title }) => {
                 src={CDN_URL + itemCard.card.info.imageId}
                 className="border bottom-3 h-44 w-full rounded-lg"
               />
+
+              <ToastContainer />
             </div>
           </div>
         );

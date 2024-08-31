@@ -1,19 +1,20 @@
 /* eslint-disable react-refresh/only-export-components */
 import "./index.css";
-import Header from './components/Header';
 import { createBrowserRouter } from 'react-router-dom'
-import About from "./components/About"
-import Contact from "./components/Contact"
-import Container from './components/Container'
 import Error from "./pages/Error";
 import { Outlet } from "react-router-dom";
-import RestaurantMenu from './components/RestaurantMenu';
 import { lazy, Suspense } from "react"; // learn about this
-// import Grocery from './components/Grocery';
-import { Provider } from "react-redux";
 
-const Grocery = lazy( () => import('./components/Grocery'))
+import { Provider } from "react-redux";
 import appStore from './utils/appStore';
+
+
+import Header from './components/Header';
+const Container = lazy ( () => import('./components/Container'))
+const AboutUS = lazy(() => import("./components/About") )
+const RestaurantMenu = lazy (() => import('./components/RestaurantMenu'))
+const Grocery = lazy(() => import('./components/Grocery'))
+
 import Cart from "./components/Cart";
 import Login from "./pages/Login";
 import Signin from "./pages/Signin";
@@ -39,27 +40,26 @@ const appRouter = createBrowserRouter([
     children : [
       {
         path: "/",
-        element: <Container />
+        element:  <Suspense>  <Container /> </Suspense>
       },
+
       {
         path: "/cart",
         element: <Cart />
       },
+
       {
         path: "/about",
-        element: <About />
+        element: <Suspense> <AboutUS /> </Suspense> 
       },
-      {
-        path: "/contact",
-        element: <Contact />
-      },
+
       {
         path: "/grocery",
         element: <Suspense fallback={<h1>Loading</h1>}> <Grocery /> </Suspense>
       },
       {
         path: "/restaurant/:id",
-        element: <RestaurantMenu />
+        element: <Suspense> <RestaurantMenu /> </Suspense>
       },
       {
         path: "/login",

@@ -16,21 +16,21 @@ const Signin = () => {
           type="text"
           placeholder="username"
           name="username"
-          className="w-full px-3 py-1 my-3 rounded-md dark:bg-neutral-800 outline-none transition-all border dark:border-neutral-700 border-neutral-400 focus:border-violet-500 focus:ring-1 focus:ring-violet-200"
+          className="w-full px-3 py-1 my-3 rounded-md outline-none transition-all border dark:border-neutral-700 border-neutral-400 focus:border-violet-500 focus:ring-1 focus:ring-violet-200"
         />
         <input
           required
           type="email"
           placeholder="Email"
           name="email"
-          className="w-full px-3 py-1 my-3 rounded-md dark:bg-neutral-800 outline-none transition-all border dark:border-neutral-700 border-neutral-400 focus:border-violet-500 invalid:focus:border-red-500 focus:ring-1 focus:ring-violet-200 invalid:focus:ring-red-200"
+          className="w-full px-3 py-1 my-3 rounded-md  outline-none transition-all border dark:border-neutral-700 border-neutral-400 focus:border-violet-500 invalid:focus:border-red-500 focus:ring-1 focus:ring-violet-200 invalid:focus:ring-red-200"
         />
         <input
           required
           type="password"
           placeholder="Password"
           name="password"
-          className="w-full px-3 py-1 my-3 rounded-md dark:bg-neutral-800 outline-none transition-all border dark:border-neutral-700 border-neutral-400 focus:border-violet-500 focus:ring-1 focus:ring-violet-200"
+          className="w-full px-3 py-1 my-3 rounded-md outline-none transition-all border dark:border-neutral-700 border-neutral-400 focus:border-violet-500 focus:ring-1 focus:ring-violet-200"
         />
 
         <button

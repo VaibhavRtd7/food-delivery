@@ -93,6 +93,7 @@
 
 older version of redux -> vanila redux
                        -> it is immutable
+                       
 But new version -> redux tool kit
                 -> it is mutale, here we can change the data of the state
                 -> here reduc use immer library for mutation
