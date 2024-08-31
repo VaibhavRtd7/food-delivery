@@ -47,11 +47,11 @@ const Header = () => {
               Cart({cartItems.length})item
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/grocery" className="hover:underline p-4">
               Grocery
             </Link>
-          </li>
+          </li> */}
 
           <li
             className="bottom-2 px-3 py-1 bg-slate-400 rounded-full"
