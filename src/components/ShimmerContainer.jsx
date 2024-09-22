@@ -15,10 +15,10 @@ const DummyCard = () => {
 const Shimmer = () => {
   return (
     <>
-      <div className="p-4 flex">
+      <div className="p-4 flex flex-col">
       <div>
           <input
-            className="border-2 border-slate-300  rounded-md mx-0.5  py-1"
+            className="border-2 border-slate-300  rounded-md mx-0.5  p-1"
             type="text"
             placeholder="Search any food"
           />
@@ -29,7 +29,7 @@ const Shimmer = () => {
           </button>
         </div>
         <button
-          className="border-2 border-slate-300 rounded-md mx-2 p-1 "
+          className="border-2 border-slate-300 rounded-md mt-3 p-1 w-48 "
         >
           Top rated restaurants
         </button>

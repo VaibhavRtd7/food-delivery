@@ -15,7 +15,9 @@ const AboutUS = lazy(() => import("./components/About") )
 const RestaurantMenu = lazy (() => import('./components/RestaurantMenu'))
 const Grocery = lazy(() => import('./components/Grocery'))
 
-import Cart from "./components/Cart";
+// import Cart from "./components/Cart";
+const Cart = lazy( () => import("./components/Cart") )
+
 import Login from "./pages/Login";
 import Signin from "./pages/Signin";
 
@@ -45,7 +47,7 @@ const appRouter = createBrowserRouter([
 
       {
         path: "/cart",
-        element: <Cart />
+        element: <Suspense>  <Cart /> </Suspense>
       },
 
       {

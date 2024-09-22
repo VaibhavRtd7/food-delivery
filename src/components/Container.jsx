@@ -71,7 +71,7 @@ const Container = () => {
           </button>
         </div>
         <button
-          className="bg-violet-400 font-serif bg border-2 border-pink-400 rounded-md mt-3 p-1 w-64 "
+          className="bg-violet-200 font-serif bg border-2 border-pink-400 rounded-md mt-3 p-1 w-48 "
           onClick={handleClick}
         >
           Top rated restaurants
