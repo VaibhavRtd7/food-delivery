@@ -13,7 +13,7 @@ const Header = () => {
  
    
   return (
-    <header className="bg-violet-600 text-white p-4 rounded-sm flex justify-between items-center shadow-lg">
+    <header className="bg-violet-600  text-white p-4 rounded-sm flex justify-between items-center shadow-lg">
       <div className="flex flex-auto text-2xl font-bold tracking-wide">
         <img
           src={LOGO_URL}
@@ -72,13 +72,12 @@ export default Header;
 
 const Search = () => {
 
-
   return (
     <div className="p-4">
       <button
         className="border-4 border-slate-400 rounded-md mt-2 p-1"
         onClick={() => {
-          console.log("Button is cliked...");
+          // console.log("Button is cliked...");
         }}
       >
         {" "}

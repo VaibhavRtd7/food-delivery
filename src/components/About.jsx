@@ -48,6 +48,7 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
+      <button className='bg-gray-50 p-2 m-2 rounded-md border-gray-600'> Just for Testing </button>
     </div>
   );
 };

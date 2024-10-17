@@ -4,22 +4,17 @@ import { createBrowserRouter } from 'react-router-dom'
 import Error from "./pages/Error";
 import { Outlet } from "react-router-dom";
 import { lazy, Suspense } from "react"; // learn about this
-
-import { Provider } from "react-redux";
-import appStore from './utils/appStore';
-
-
 import Header from './components/Header';
+import Login from "./pages/Login";
+import Signin from "./pages/Signin";
 const Container = lazy ( () => import('./components/Container'))
 const AboutUS = lazy(() => import("./components/About") )
 const RestaurantMenu = lazy (() => import('./components/RestaurantMenu'))
 const Grocery = lazy(() => import('./components/Grocery'))
-
-// import Cart from "./components/Cart";
 const Cart = lazy( () => import("./components/Cart") )
+import { Provider } from "react-redux";
+import appStore from './utils/appStore';
 
-import Login from "./pages/Login";
-import Signin from "./pages/Signin";
 
 
 const App = () => {

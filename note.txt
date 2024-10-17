@@ -80,7 +80,7 @@
     1) react-Redux
     2) redux-toolkit
 
-    -vanila redux -> is too complex
+   - vanila redux -> is too complex
 
    -> add to cart button clicked
    -> dispathes an action  which call reducer function which is update the slice of the store
@@ -101,30 +101,16 @@ But new version -> redux tool kit
 Immer simplifies handling immutable data structures​
 Immer can be used in any context in which immutable data structures need to be used
 
+-------------
+
+- installation
+- build our store
+- connect our store to our app
+- slice ( cartSlice)
+- dispathe ( action )
+- Selector 
+
+-------------
+
 <<<<------------------------------------------------------------------------------------->>>>>
 <<<<------------------------------------------------------------------------------------->>>>>
-
-Redux Dev Tools
-Read the RTK from the document.
-
------------
-Developer Testing
-
-Manual testing - not sufficient
-Types of Testing (Developer Testing) :- 
-1) Unit Testing
-2) Integration Testing
-         - events included
-3) End-to-end Testing
-
---> React Testing Library
-      it is build on top of DOM-Testing Library
---> Jest
-   RTL used Jest Testing Library behibd the screen 
-
-# Setting up Testing in our app
-- Install React Testing Library
-- Install Jest
-- Install Babel dependencies
-- configure Babel
-- configure parcel config file to disable default babel transpilation

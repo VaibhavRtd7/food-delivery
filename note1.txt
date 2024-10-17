@@ -1,0 +1,95 @@
+---------------------------------------------------------------------
+Read the RTK from the document.
+---------------------------------------------------------------------
+
+
+for routing -> react-router-dom 
+for testing  -> react-testing library ( rtl)
+for state-management -> redux-toolkit
+for bundling  -> parcel
+
+Developer Testing
+
+   Manual testing - not sufficient for large projects
+
+
+Types of Testing (Developer Testing) :- 
+1) Unit Testing
+2) Integration Testing
+         - events included
+3) End-to-end Testing
+
+   - sellenium 
+   - cypress
+   - pupitier
+     
+
+--- DOM Testing Library is the base of all testing library
+--- creata-react-app
+       - RTL - built in here
+
+--> React Testing Library
+      it is build on top of DOM-Testing Library
+--> Jest
+   RTL used Jest Testing Library behind the screen 
+
+# Setting up Testing in our app #
+
+- Install React Testing Library  
+- Install Jest
+- Install Babel dependencies ( jest website )
+- configure Babel ( babel.config.js )
+- configure parcel config file to disable default babel transpilation  ( .parcerc)
+
+- jest configuration ( npx jest --init)
+   - jsdom (browser-like)
+
+- Install jsdom library
+
+
+
+------------>   <------------
+npx jest --init
+
+The following questions will help Jest to create a suitable configuration for your project
+
+√ Would you like to use Typescript for the configuration file? ... no
+√ Choose the test environment that will be used for testing » jsdom (browser-like)
+√ Do you want Jest to add coverage reports? ... yes
+√ Which provider should be used to instrument code for coverage? » babel                             
+√ Automatically clear mock calls, instances, contexts and results before every test? ... yes
+
+and now   jest.config.mjs file be generated  
+------------>   <------------
+
+npm v/s npx
+
+
+< ------------------------------------------------------- >
+Unit Testing
+
+- Install @babel/preset-react - to make the JSX work in test cases
+  include '@babel/preset-react' in a babel config 
+- Install @testing-library/jest-dom  (npm i -D @testing-library/jest-dom)
+  then import in the testing file
+
+     -- import { fireEvent, render, screen } from '@testing-library/react';
+    1) render the component that we want to test (render in the js-dom)
+      --  render(<AboutUs />);
+
+    2) store the  particular element is present or not in that rendered component
+      - const headings = screen.getAllByRole("heading");
+       
+       The screen object in this code is provided by the @testing-library/react package, specifically by its render method. It is used to query elements rendered in the virtual DOM during tests. The purpose of the screen object is to provide an easy-to-use interface for selecting and asserting elements in the DOM as part of the testing process.
+
+    3) make the assertion
+      - here we comapre the result with expected value
+      -- expect(heading).toBeInTheDocument();
+
+< ------------------------------------------------------- >
+
+Integration Testing
+
+for example - Search Functionality...
+It includes multiple components
+- api fetching

@@ -14,8 +14,8 @@ module.exports = {
   rules: {
     'react/jsx-no-target-blank': 'off',
     "react/prop-types": "off",
-    "react/jsx-uses-react": "error",   
-    "react/jsx-uses-vars": "error" ,
+    "react/jsx-uses-react": "warn",   
+    "react/jsx-uses-vars": "warn" ,
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
