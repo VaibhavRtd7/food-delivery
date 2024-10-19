@@ -39,7 +39,7 @@ const Container = () => {
       const json = await res.json();
 
       const restaurants =
-        json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants;
+        json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
 
       setListOfRestaurants(restaurants);
       setFilterRestaurants(restaurants);
@@ -55,7 +55,7 @@ const Container = () => {
     <>
       {/*  Search Bar And Top Rated Restaurants */}
       <div className="p-4 flex flex-col">
-        <div>
+        <div className="">
           <input
             className="border-2 border-slate-400 rounded-md mx-0.5  p-1"
             type="text"
@@ -63,19 +63,21 @@ const Container = () => {
             onChange={(e) => setSearchData(e.target.value)}
             value={searchData}
           />
+
           <button
             className="border-2 border-slate-400 rounded-md p-1"
             onClick={handleSearch}
           >
             Search
           </button>
+
+          <button
+            className="mx-3 bg-violet-200 font-serif bg border-2 border-gray-400 rounded-md mt-3 p-1 w-48 "
+            onClick={handleClick}
+          >
+            Top rated restaurants
+          </button>
         </div>
-        <button
-          className="bg-violet-200 font-serif bg border-2 border-pink-400 rounded-md mt-3 p-1 w-48 "
-          onClick={handleClick}
-        >
-          Top rated restaurants
-        </button>
       </div>
 
       <div className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
